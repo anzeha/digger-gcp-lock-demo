@@ -18,6 +18,8 @@ jobs:
         with:
           setup-google-cloud: true
           google-auth-credentials: '${{ secrets.GCP_CREDENTIALS }}'
+          disable-locking: true
+          no-backend: true
         env:
           LOCK_PROVIDER: gcp
           GITHUB_CONTEXT: ${{ toJson(github) }}
